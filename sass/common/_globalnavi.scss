@@ -1,0 +1,398 @@
+@use "../_setting" as s;
+
+.globalNavi {
+	display:none;
+	@include s.media(m){
+		display:block;
+	}
+}
+
+// .globalNaviSmall　グローバルナビ ハンバーガーメニュー
+.globalNaviSmall {
+	&__icon {
+		width: 2.9em;
+		height: 2.9em;
+		position: absolute;
+		top:0;
+		right:0;
+	}
+	&__iconButton{
+		width: 5em;
+		height: 5em;
+		cursor:pointer;
+		float: right;
+		display: block;
+		background: rgba(s.$colorType02,1);
+		position: relative;
+		z-index:999;
+	}
+	&__icon span {
+	    width: 2em;
+	    height: 1px;
+	    display: block;
+	    background: #FFF;
+	    position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    margin-left: -20%; 
+	}
+}
+
+.is-open .globalNaviSmall__iconButton{ z-index:0; }
+
+.globalNaviSmall{
+	&__icon--type01{
+		// ハンバーガーメニュー 押す前
+		span {
+		  -webkit-transition: all 0.3s;
+		          transition: all 0.3s;
+		  -webkit-transform: rotate(0deg);
+		      -ms-transform: rotate(0deg);
+		          transform: rotate(0deg); 
+		}
+		.iconButton--top {
+		  -webkit-transform: translateY(-0.7em);
+		      -ms-transform: translateY(-0.7em);
+		          transform: translateY(-0.7em); 
+		}
+		.iconButton--bottom {
+		  -webkit-transform: translateY(0.7em);
+		      -ms-transform: translateY(0.7em);
+		          transform: translateY(0.7em); 
+    	}
+
+    	// ハンバーガーメニュー hover
+		&:hover {
+			.iconButton--top {
+			  -webkit-transform: translateY(-0.8em);
+			      -ms-transform: translateY(-0.8em);
+			          transform: translateY(-0.8em);
+			}
+			.iconButton--bottom {
+			  -webkit-transform: translateY(0.8em);
+			      -ms-transform: translateY(0.8em);
+			          transform: translateY(0.8em); 
+          	}
+    	}
+
+    	// ハンバーガーメニュー 押した後の動き
+		&.is-open {
+			.iconButton--middle {
+			  background: rgba(255, 255, 255, 0);
+			}
+			.iconButton--top {
+			  -webkit-transform: rotate(-45deg) translateY(0px);
+			      -ms-transform: rotate(-45deg) translateY(0px);
+			          transform: rotate(-45deg) translateY(0px); 
+			}
+			.iconButton--bottom {
+				  -webkit-transform: rotate(45deg) translateY(0px);
+				      -ms-transform: rotate(45deg) translateY(0px);
+				          transform: rotate(45deg) translateY(0px);
+			}
+    	}
+	}
+}
+
+
+
+/* .globalNaviSmall　スマホグローバルナビ
+------------------------------------------ */
+.globalNaviSmall {
+	display:block;
+	width:100%;
+	position: fixed;
+	z-index:10;
+	top:0;
+	left:0;
+	@include s.media(m){
+		display: none;
+	}
+	&__menu{
+		width:100%;
+	  	max-height: 100vh;
+		display:block;
+		&__inner{
+			width:100%;
+		  	min-height: 100vh;
+			overflow-x:hidden;
+			overflow-y:auto;
+  		//padding-top: 4.9em;
+			display:block;
+		}
+		&__main{
+			li {
+				border-bottom:#FFF solid 1px;
+				display:block;
+				a{
+					font-family: 'Noto Sans JP', sans-serif;
+					font-weight: 500;
+					color:#FFF;
+					margin:0.8rem 0;
+					display:block;
+					font-size:1.4em;
+					&:hover{
+						color:#999;
+					}
+					&:after{
+				    content: "\f105";
+						font-family: 'icomoon';
+						float:left;
+						padding-right:1em;
+					}
+				}
+			}
+			>li:last-child {
+				margin-bottom:5em;
+			}
+		}
+		&__sub li{
+  			padding:0 0 0 1em;
+		}
+	}
+	.modal__overlay {
+		background: none;
+	}
+	.modal__container {
+		background:rgba(0,0,0,.8);
+		width:100%;
+		max-width: 100%;
+		border-radius: 0;
+  		padding: 0;
+		min-height: 100vh;
+	}
+}
+
+
+/* Safari */
+_:lang(x)+_:-webkit-full-screen-document, .globalNaviSmall__menu {
+  min-height: -webkit-fill-available;
+}
+_:lang(x)+_:-webkit-full-screen-document, .globalNaviSmall__menu__inner {
+  min-height: -webkit-fill-available;
+}
+
+#globalNaviSmallIcon--closeButton{
+	margin-top:1em;
+	display:block;
+	text-align:center;
+	span{
+		display:inline-block;
+		background:#FFF;
+		font-size:1.24em;
+		padding:0.5em 1em 0.5em 2.5em;
+		cursor:pointer;
+		position:relative;
+		border-radius: 2.6em;
+		font-family: 'Noto Sans JP', sans-serif;
+		font-weight: 700;
+		&:after{
+			content: "\f00d";
+			font-family: 'icomoon';
+			position:absolute;
+			top:50%;
+			left:1em;
+			margin-top:-0.5em;
+		}
+	}
+}
+
+// .tabBox--globalNaviSmall
+.tabBox--globalNaviSmall {
+  	display: block;
+  	&__button{
+  		width: calc(100%/2);
+  		font-size: 1.1em;
+  		color: #fff;
+  		text-align: center;
+  		display: block;
+  		float: left;
+			transition: all 0.5s ease;
+	    cursor :pointer;
+  		padding: s.$spaceSize calc(s.$spaceSize/2);
+  		dt{
+  			color:#000;
+  			background:#FFF;
+				padding: 0.1em 2em;
+				border-radius: 2em;
+				display:inline-block;
+				font-size:0.8em;
+				margin-bottom:0.3em;
+			}
+			dd{
+				font-family: 'Noto Sans JP', sans-serif;
+				font-weight: 700;
+				font-size:1.2em;
+				display:block;
+			}
+		@include s.media(m){
+  			font-size: 1.2em;
+  			padding: s.$spaceSize;
+		}
+		&:hover{
+			//opacity: 0.5;
+		}
+	}
+	input[name="tabBox--globalNaviSmall__button"] {
+		display: none;
+	}
+	&__content{
+	  	display: none;
+	  	clear: both;
+	  	overflow: hidden;
+	  	padding: calc(s.$spaceSize/2) s.$spaceSize;
+		@include s.media(m){
+	    	padding: s.$spaceSize s.$spaceSize*2;
+		}
+	}
+	//選択されているタブのコンテンツのみを表示
+	#tabBox--globalNaviSmall__label001:checked ~ #tabBox--globalNaviSmall__label001__content,
+	#tabBox--globalNaviSmall__label002:checked ~ #tabBox--globalNaviSmall__label002__content {
+	  	display: block;
+		animation-name: tabBox--globalNaviSmall--fade;
+		animation-duration: .4s;
+	}
+	//選択されているタブのスタイルを変える
+	input:checked + .tabBox--globalNaviSmall__button {
+	  	//background-color: #000;
+	  	//color: #fff;
+		pointer-events:none;
+	}
+	input:checked + .tabBox--globalNaviSmall__button:hover {
+		opacity: 1;
+	}
+}
+
+@keyframes tabBox--globalNaviSmall--fade{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+#tabBox--globalNaviSmall__label001__content{background:rgba(s.$colorType03,.7);}
+#tabBox--globalNaviSmall__label002__content{background:rgba(s.$colorType04,.7);}
+
+#tabBox--globalNaviSmall__label001+label{background:rgba(s.$colorType03,.7);}
+#tabBox--globalNaviSmall__label002+label{background:rgba(s.$colorType04,.7);}
+
+#tabBox--globalNaviSmall__label001+label dt{ color:s.$colorType03;}
+#tabBox--globalNaviSmall__label002+label dt{ color:s.$colorType04;}
+
+//以下768px以上で適用される　レイアウトの指定-----------------------------------------------
+@include s.media(m){
+
+.globalNavi{
+	&__menu{
+		&__main{
+    	display:flex;
+    	widtdh:100%;
+    	justify-content:flex-end;
+			>li {
+				height: 5em;
+				margin-left:0.5em;
+				margin-right:0.5em;
+				text-align:center;
+				display:block;
+			  position: relative; /*z-indexの指定や子要素の基準とするために指定*/
+			  z-index: 2; /*ドロップダウンしたメニューが隠れないように*/
+			}
+			li a {
+				text-decoration:none;
+				display:block;
+				padding: 0.6em 0 0.6em 2.8em;
+				position: relative;
+				font-family: 'Noto Sans JP', sans-serif;
+				font-weight: 700;
+				letter-spacing:0.1em;
+				font-size:1.2em;
+				&::after{
+				    content: "\f138";
+						font-family: 'icomoon';
+				    position: absolute;
+				    top: 50%;
+				    left: 1em;
+				    margin-top:-0.8em;
+				    transition: all 0.5s;
+				    color:#ff9d1e;
+				}
+				&:hover{
+					color: #666;
+					text-decoration:none;
+				}
+				&:hover::after{
+					left: 1.4em;
+				}
+			}
+		}
+	}
+}
+
+/* When Active Page */
+body#■■ .globalNavi ul.globalNavi__menu__main>li:nth-child(3)>a {color:#EEE !important; pointer-events: none;}
+body#■■ .globalNavi ul.globalNavi__menu__main>li:nth-child(4)>a {color:#EEE !important; pointer-events: none;}
+body#■■ .globalNavi ul.globalNavi__menu__main>li:nth-child(5)>a {color:#EEE !important; pointer-events: none;}
+body#■■ .globalNavi ul.globalNavi__menu__main>li:nth-child(6)>a {color:#EEE !important; pointer-events: none;}
+
+
+// globalNavi__menu__sub
+.globalNavi {
+	ul{
+		li{
+			ul.globalNavi__menu__sub {
+				width:100%;
+			  	opacity: 0;  /*サブメニューは最初は非表示にしておく*/
+			  	visibility: hidden;  /*サブメニューは最初は非表示にしておく*/
+			  	position: absolute;  /*絶対配置にしておかないとうまくいかない*/
+			  	top: 3.7em;
+			  	left: 0;
+			  	border-top: 1px solid #EEE;  /*ボーダートップを指定*/
+			    -webkit-transition: all .2s ease;
+			    transition: all .2s ease;
+			    li{
+					height:auto;
+				  	float: none;  /*サブメニューはフロートさせないので解除*/
+				  	padding: 0;  /*親メニューのパディングを解除*/
+					margin:0;
+					*margin-top:-8px;
+					display:block;
+					line-height:1.5em;
+					a{
+					  	border: 1px solid #eee;  /*ボーダーの指定*/
+					  	border-top: none;  /*ボーダートップは重なって太くなるので解除。一番上は ul 要素に指定*/
+					  	padding: 0.8rem 0;
+					  	background-color: #FFF;
+						text-decoration:none;
+					  	color: #666;
+						text-align:center;
+						display:block;
+						font-size:0.9em;
+						&:hover{ 
+							color:#000;
+						  	background-color: #EEE;
+						}
+					}
+				}
+			}
+			&:hover ul.globalNavi__menu__sub {
+				width:100%;
+			  	top: 3.9em;
+			    visibility:visible;
+			    opacity: 1;
+			  	display: block;    /*マウスオーバー時にサブメニューを表示する*/
+			}
+		}
+	}
+}
+
+.globalNavi.globalNaviAccordion ul.globalNavi__menu__sub li{
+  	padding:0;
+}
+
+/* When Active Page */
+/*body#■■ .globalNavi ul.globalNavi__menu__main li:nth-child(■) ul.globalNavi__menu__sub li:nth-child(■) a { color:#000; background-color: #DDD; pointer-events: none; }*/
+
+} 
+// 768px以上で適用される　レイアウトの指定　ここまで

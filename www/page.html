@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="●サイトの検索キーワード●" />
+<meta name="description" content="●サイトの検索説明●" />
+<title>●サイトのタイトル●</title>
+<meta property="og:url" content="●ページの URL●" />
+<meta property="og:type" content="●ページの種類●website article" />
+<meta property="og:title" content="●ページの タイトル●" />
+<meta property="og:description" content="●ページの説明文●" />
+<meta property="og:site_name" content="●サイト名●" />
+<meta property="og:image" content="●サムネイル画像のURL●" />
+<meta name="apple-mobile-web-app-title" content="●iOS表示名●" />
+<meta name="author" content="●作者名●" />
+<link rel="apple-touch-icon" href="iphone.png">
+<link rel="stylesheet" href="css/import.css" media="all" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="wrapper">
+	<header id="header" class="clearfix">
+		<div class="header__headBox">
+			
+			<div id="pageTopFix">
+			<div class="header__siteTitleBox">
+				<div class="inBase clearfix">
+					<div class="header__siteTitle"><h1><a href="<?php echo home_url(); ?>"><img src="img/common/siteTitle.png" alt="株式会社アクティブモード" /></a></h1><!-- /.header__siteTitle --></div>
+					<div class="header__headContent">
+						<ul class="header__cotactBox">
+							<li class="header__cotactTel">087-813-6117</li>
+							<li class="header__cotactFax">087-813-6118</li>
+							<li class="header__cotactMail"><a href="<?php echo home_url(); ?>/contact">お問い合わせ</a></li>
+						</ul>
+						<nav class="globalNavi">
+							<ul class="globalNavi__menu__main clearfix">
+								<li><a href="<?php echo home_url(); ?>/pet-transfer">ペット送迎</a></li>
+								<li><a href="<?php echo home_url(); ?>/transportation-business">軽貨物運送事業</a></li>
+								<li><a href="<?php echo home_url(); ?>/company">会社概要</a></li>
+							</ul>
+					    <!-- /.globalNavi --></nav>
+						
+					<!-- /.header__headContent --></div>
+				<!-- /.inBase --></div>
+			<!-- /.header__siteTitleBox --></div>
+			<!-- /#pageTopFix --></div>
+
+		
+			<nav class="globalNaviSmall">
+				<div id="globalNaviSmallIcon" class="globalNaviSmall__icon globalNaviSmall__icon--type01">
+					<div class="globalNaviSmall__iconButton">
+						<span class="iconButton--top"></span>
+						<span class="iconButton--middle"></span>
+						<span class="iconButton--bottom"></span>
+					</div>
+				</div>
+
+				<div class="modal micromodal-slide" id="modal-globalNaviSmall" aria-hidden="true">
+					<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+				    		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-globalNaviSmall-labelledby">
+
+							<div class="globalNaviSmall__menu" id="modal-globalNaviSmall-labelledby">
+								<div class="globalNaviSmall__menu__inner">
+
+				                    <div class="tabBox--globalNaviSmall">
+				                        <input type="radio" name="tabBox--globalNaviSmall__button" id="tabBox--globalNaviSmall__label001" checked>
+				                        <label class="tabBox--globalNaviSmall__button" for="tabBox--globalNaviSmall__label001">
+				                        	<dl>
+												<dt>ペット送迎</dt>
+												<dd>gigi<small>-ジジ-</small></dd>
+											</dl>
+				                        </label>
+
+				                        <input type="radio" name="tabBox--globalNaviSmall__button" id="tabBox--globalNaviSmall__label002">
+				                        <label class="tabBox--globalNaviSmall__button" for="tabBox--globalNaviSmall__label002">
+				                        	<dl>
+												<dt>企業専門</dt>
+												<dd>軽貨物運送事業</dd>
+											</dl>
+				                        </label>
+
+				                        <div class="tabBox--globalNaviSmall__content" id="tabBox--globalNaviSmall__label001__content">
+				                        <!--タブの内容ここから-->
+											<ul class="globalNaviSmall__menu__main">
+												<li><a href="<?php echo home_url(); ?>/pet-transfer">ペット送迎</a></li>
+												<li><a href="<?php echo home_url(); ?>/pet-transfer/guide">初めての方はこちら</a></li>
+												<li><a href="<?php echo home_url(); ?>/pet-transfer/plan">料金プラン</a></li>
+												<li><a href="<?php echo home_url(); ?>/pet-transfer/note">当サービスの注意事項</a></li>
+												<li><a href="<?php echo home_url(); ?>/pet-transfer/question">よくあるご質問</a></li>
+												<li><a href="<?php echo home_url(); ?>/pet-transfer/voice">お客様の声</a></li>
+												<li><a href="<?php echo home_url(); ?>/pet-blog">スタッフブログ</a></li>
+											</ul>
+				                        <!--タブの内容ここまで-->
+				                        <!-- /.tabBox__content --></div>
+
+				                        <div class="tabBox--globalNaviSmall__content" id="tabBox--globalNaviSmall__label002__content">
+				                        <!--タブの内容ここから-->
+											<ul class="globalNaviSmall__menu__main">
+												<li><a href="<?php echo home_url(); ?>/transportation-business">軽貨物運送事業</a></li>
+												<li><a href="<?php echo home_url(); ?>/transportation-business/charter">貸切チャーター便</a></li>
+												<li><a href="<?php echo home_url(); ?>/transportation-business/regular">企業専属定期便</a></li>
+												<li><a href="<?php echo home_url(); ?>/transportation-business/mail">企業メール便</a></li>
+												<li><a href="<?php echo home_url(); ?>/transportation-business/price">ご利用料金について</a></li>
+												<li><a href="<?php echo home_url(); ?>/transportation-blog">スタッフブログ</a></li>
+											</ul>
+				                        <!--タブの内容ここまで-->
+				                        <!-- /.tabBox__content --></div>
+
+				                    <!--//.tabBox--></div>
+							<div id="globalNaviSmallIcon--closeButton"><span>閉じる</span></div>
+
+
+
+								<!-- /.globalNaviSmall__menu__inner --></div>
+							<!-- /.globalNaviSmall__menu --></div>
+
+				    		<!-- /.modal__container --></div>
+					<!-- /.modal__overlay --></div>
+				<!-- /#modal-globalNaviSmall --></div>
+
+
+			<!-- /.globalNaviSmall --></nav>
+        	<!-- /.header__headBox --></div>
+	<!-- /#header --></header>
+    
+    <div class="pageTitleBox sM-s">
+	<div class="pageTitle">
+		<div class="inBase clearfix">
+			<h1>見出しが入ります。見出しが入ります。</h1>
+		<!-- /.inBase --></div>
+	<!-- /.pageTitle --></div>
+    <!-- /.pageTitleBox --></div>
+	
+	<div id="contents" class="clearfix">
+		<div class="inBase clearfix">
+			<div class="topicpath sM">
+				<ul>
+				    <li><a href="index.html">ホーム</a></li>
+				    <li>タイトル</li>
+				</ul>
+			<!-- /.topicpath --></div>
+
+			
+			<div class="article">
+				<h2>見出しが入ります。見出しが入ります。</h2>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+				<h3>見出し3が入りますテキストテキストテキストテキストテキスト</h3>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+				<h4>見出し4が入りますテキストテキストテキストテキストテキスト</h4>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+
+					<ul>
+						<li>ULリストが入ります。リストが入ります。リストが入ります。</li>
+						<li>ULリストが入ります。リストが入ります。リストが入ります。</li>
+						<li>ULリストが入ります。リストが入ります。リストが入ります。</li>
+					</ul>
+
+					<ol>
+						<li>OLリストが入ります。リストが入ります。リストが入ります。</li>
+						<li>OLリストが入ります。リストが入ります。リストが入ります。</li>
+						<li>OLリストが入ります。リストが入ります。リストが入ります。</li>
+					</ol>
+
+					<table>
+						<tr>
+							<th>テキスト</th>
+							<td>テキスト</td>
+						</tr>
+						<tr>
+							<th>テキスト</th>
+							<td>テキスト</td>
+						</tr>
+						<tr>
+							<th>テキスト</th>
+							<td>テキスト</td>
+						</tr>
+						<tr>
+							<th>テキスト</th>
+							<td>テキスト</td>
+						</tr>
+						
+					</table>
+
+
+			<!-- /.article --></div>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		<!-- /.inBase --></div>
+	<!-- /#contents --></div>
+
+	
+	<footer id="footer clear">
+		<div class="footer__headBox clearfix">
+			<div class="footer__informationBox">
+				<div class="inBase clearfix">
+					<dl class="footer__information">
+						<dt class="footer__information__siteTitle">
+							<img src="img/common/siteTitle.png" alt="株式会社アクティブモード" class="--pc" />
+							<img src="img/common/imgFootTitleSp.png" alt="株式会社アクティブモード" class="--sp" />
+						</dt>
+						<dd>住所：香川県高松市勅使町1336番地1<br>
+							TEL：087-813-6117<br>
+							FAX：087-813-6118<br>
+							定休日：〇曜日<br>
+							営業時間：00：00～00：00
+						</dd>
+					</dl>
+				<!-- /.inBase --></div>
+			<!-- /.footer__informationBox --></div>
+
+			<div class="footMapBox"><div class="footMapBox__inner">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6591.205209982585!2d134.02088494937627!3d34.30966983495908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3553ea24ec7db2b1%3A0xd42f8eee3c543b8d!2z77yI5qCq77yJ44Ki44Kv44OG44Kj44OW44Oi44O844OJ!5e0!3m2!1sja!2sjp!4v1677492897382!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<!-- /.footMapBox__inner --></div><!-- /.footMapBox --></div>
+
+			<p class="footer__address--sp">住所：香川県高松市勅使町1336番地1</p>
+		<!-- /.footer__headBox --></div>
+
+		<div class="footer__naviBox inBase clearfix">
+			<ul class="footer__navi">
+				<li class="type01"><a href="<?php echo home_url(); ?>/pet-transfer">ペット送迎</a></li>
+				<li><a href="<?php echo home_url(); ?>/pet-transfer/guide">初めての方はこちら</a></li>
+				<li><a href="<?php echo home_url(); ?>/pet-transfer/plan">料金プラン</a></li>
+				<li><a href="<?php echo home_url(); ?>/pet-transfer/note">当サービスの注意事項</a></li>
+				<li><a href="<?php echo home_url(); ?>/pet-transfer/question">よくあるご質問</a></li>
+			        <li><a href="<?php echo home_url(); ?>/pet-transfer/voice">お客様の声</a></li>
+			        <li><a href="<?php echo home_url(); ?>/pet-transfer/pet-blog">スタッフブログ</a></li>
+			</ul>
+			<ul class="footer__navi">
+				<li class="type01"><a href="<?php echo home_url(); ?>/transportation-business">軽貨物運送事業</a></li>
+				<li><a href="<?php echo home_url(); ?>/transportation-business/charter">貸切チャーター便</a></li>
+				<li><a href="<?php echo home_url(); ?>/transportation-business/regular">企業専属定期便</a></li>
+				<li><a href="<?php echo home_url(); ?>/transportation-business/mail">企業メール便</a></li>
+				<li><a href="<?php echo home_url(); ?>/transportation-business/price">ご利用料金について</a></li>
+			        <li><a href="<?php echo home_url(); ?>/transportation-business/transportation-blog">スタッフブログ</a></li>
+			</ul>
+			<ul class="footer__navi">
+				<li class="type01"><a href="<?php echo home_url(); ?>/p_blog">コラム</a></li>
+				<li class="type01"><a href="<?php echo home_url(); ?>/company">会社概要</a></li>
+				<li class="type01"><a href="<?php echo home_url(); ?>/contact">お問い合わせ</a></li>
+			</ul>
+			
+			<div class="footer__bunner"><a href="#" target="__blank"><img src="img/common/banner01.png" alt="ペットの訪問火葬　天国への扉" /></a></div>
+			
+
+		<!-- /.inBase --></div>
+		
+	<!-- /#footer --></footer>
+
+	<small class="copyright">&copy; 2022 株式会社アクティブモード All Rights Reserved.</small>
+        
+	<p id="btnRise"><a href="#wrapper"><i class="icon-arrow-up"></i><span>ページ上部に戻る</span></a></p>
+	  
+	<div id="btnTelEmpty"></div>
+    
+	<div id="btnPageBottom">
+	        <div class="btnPageBottom--btn btnPageBottom--type02">
+	        	<div class="btnPageBottom--type02__inner">
+		            <a class="clearfix" href="tel:0878136117">
+		                <i class="CONDENSE-icon">=</i>
+		                <span class="btnPageBottom--type02__btnSent">TEL</span>
+		            </a>
+		            <a class="clearfix" href="#">
+		                <i class="CONDENSE-icon">U</i>
+		                <span class="btnPageBottom--type02__btnSent">LINE</span>
+		            </a>
+		            <a class="clearfix" href="<?php echo home_url(); ?>/contact">
+		                <i class="CONDENSE-icon">F</i>
+		                <span class="btnPageBottom--type02__btnSent">MAIL</span>
+		            </a>
+	            <!-- /.btnPageBottom--type02__inner --></div>
+	        <!-- /.btnPageBottom--btn --></div>
+	<!-- /#btnPageBottom --></div>
+<!-- /#wrapper --></div>
+
+</body>
+</html>
+
+<script data-main="js/main" src="js/require.js"></script>

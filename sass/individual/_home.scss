@@ -1,0 +1,1233 @@
+@use "../_setting" as s;
+
+body.home #wrapper{
+	.globalNavi__menu__main{
+		display:none;
+	}
+	.header__siteTitle{
+		@include s.media(m){
+			margin-top:-1em;
+			margin-bottom:2em;
+		}
+	}
+	.is-scroll{
+		.globalNavi__menu__main{
+			display:block;
+			li{
+				display:inline-block;
+			}
+		}
+		.header__siteTitle{
+			@include s.media(m){
+				margin-top:2.2em;
+				margin-bottom:0;
+			}
+			@include s.media(xl){
+				margin-top:1.2em;
+			}
+		}
+	}
+	.mainVisual {
+		display:block;
+		background:#fdfeef;
+		position:relative;
+		&__image {
+			width:176%;
+			margin-left:-38%;
+			img{
+				width:100%;
+			}
+		}
+		&__content {
+			position:absolute;
+			top:0;
+			left:27%;
+			display:block;
+			@include s.media(m){
+				left:27%;
+			}
+			@include s.media(xl){
+				left:35%;
+			}
+		}
+		&__chach{
+			margin-top:2.5em;
+			@include s.media(m){
+				margin-top:8em;
+			}
+			@include s.media(xl){
+				margin-top:9em;
+			}
+			h2{
+				font-family: 'Noto Sans JP', sans-serif;
+				font-weight: 700;
+				font-size:1.7em;
+				letter-spacing:0.1em;
+				text-shadow: 
+				white 2px 0px,  white -2px 0px,
+			    white 0px -2px, white 0px 2px,
+			    white 2px 2px , white -2px 2px,
+			    white 2px -2px, white -2px -2px,
+			    white 1px 2px,  white -1px 2px,
+			    white 1px -2px, white -1px -2px,
+			    white 2px 1px,  white -2px 1px,
+			    white 2px -1px, white -2px -1px;
+				@include s.media(m){
+					font-size:2.8em;
+				}
+				strong{
+					font-family: 'Noto Sans JP', sans-serif;
+					font-weight: 700;
+					letter-spacing:0.1em;
+					font-size:1.2em;
+					color:#FFF;
+					text-shadow: 
+					    s.$colorType03 2px 0px,  s.$colorType03 -2px 0px,
+					    s.$colorType03 0px -2px, s.$colorType03 0px 2px,
+					    s.$colorType03 2px 2px , s.$colorType03 -2px 2px,
+					    s.$colorType03 2px -2px, s.$colorType03 -2px -2px,
+					    s.$colorType03 1px 2px,  s.$colorType03 -1px 2px,
+					    s.$colorType03 1px -2px, s.$colorType03 -1px -2px,
+					    s.$colorType03 2px 1px,  s.$colorType03 -2px 1px,
+					    s.$colorType03 2px -1px, s.$colorType03 -2px -1px;
+					@include s.media(m){
+						text-shadow: 
+						    s.$colorType03 3px 0px,  s.$colorType03 -3px 0px,
+						    s.$colorType03 0px -3px, s.$colorType03 0px 3px,
+						    s.$colorType03 3px 3px , s.$colorType03 -3px 3px,
+						    s.$colorType03 3px -3px, s.$colorType03 -3px -3px,
+						    s.$colorType03 1px 3px,  s.$colorType03 -1px 3px,
+						    s.$colorType03 1px -3px, s.$colorType03 -1px -3px,
+						    s.$colorType03 3px 1px,  s.$colorType03 -3px 1px,
+						    s.$colorType03 3px -1px, s.$colorType03 -3px -1px;
+					}
+				}
+				b{
+					font-size:1.2em;
+					color:s.$colorType03;
+				}
+			}
+		}
+		&__sentence{
+			font-family: 'Noto Sans JP', sans-serif;
+			font-weight: 700;
+			font-size:0.8em;
+			text-shadow:
+			white 1px 0px,  white -1px 0px,
+		    white 0px -1px, white 0px 1px,
+		    white 1px 1px , white -1px 1px,
+		    white 1px -1px, white -1px -1px,
+		    white 1px 1px,  white -1px 1px,
+		    white 1px -1px, white -1px -1px,
+		    white 1px 1px,  white -1px 1px,
+		    white 1px -1px, white -1px -1px;
+			@include s.media(m){
+				font-size:1.7em;
+				letter-spacing:0.1em;
+				text-shadow:
+					white 2px 0px,  white -2px 0px,
+				    	white 0px -2px, white 0px 2px,
+				    	white 2px 2px , white -2px 2px,
+				    	white 2px -2px, white -2px -2px,
+				    	white 1px 2px,  white -1px 2px,
+				    	white 1px -2px, white -1px -2px,
+				    	white 2px 1px,  white -2px 1px,
+				    	white 2px -1px, white -2px -1px;
+			}
+		}
+	}
+}
+
+#wrapper .homeHeadButtonBox{
+	margin-top:2em;
+	display:block;
+	position:relative;
+	margin-bottom:1.5em;
+	@include s.media(m){
+		margin-top:-6em;
+		margin-bottom:2em;
+	}
+	.homeHeadButton{
+		a{
+			display:block;
+			position:relative;
+			border-radius:0.5em;
+			overflow:hidden;
+			&::before {
+				content:" ";
+				width:100%;
+				height:100%;
+				border-radius:0.5em;
+				border:#FFF solid 5px;
+				position:absolute;
+				top:0;
+				left:0;
+				@include s.media(xl){
+					border:#FFF solid 13px;
+				}
+			}
+			&::after {
+				content:" ";
+				width:100%;
+				height:100%;
+				border-radius:0.5em;
+				border:s.$colorType03 solid 3px;
+				position:absolute;
+				top:0;
+				left:0;
+		    	transition: all 0.5s;
+				@include s.media(xl){
+					border:s.$colorType03 solid 9px;
+				}
+			}
+			&:hover{
+				&::after {
+					border-color:#000;
+				}
+				dl dt{
+					background: #000;
+				}
+				color:#000;
+			}
+			img{
+				width:100%;
+			}
+			figure{
+				img.--pc{
+					display:none;
+					@include s.media(m){
+						display:block;
+					}
+				}
+				img.--sp{
+					display:block;
+					@include s.media(m){
+						display:none;
+					}
+				}
+			}
+			dl{
+				width:100%;
+				text-align:center;
+				display:block;
+				position:absolute;
+				top:0;
+				left:0;
+				padding-top:1em;
+				@include s.media(m){
+					padding-top:2.5em;
+				}
+				@include s.media(xl){
+					padding-top:3em;
+				}
+				dt{
+					font-family: 'Noto Sans JP', sans-serif;
+					font-weight: 700;
+					font-size:0.8em;
+					letter-spacing:0.1em;
+					color: #FFF;
+					background: s.$colorType03;
+					display: inline-block;
+					position: relative;
+					padding: 0.1em 2em;
+					border-radius: 2em;
+		    		transition: all 0.5s;
+					@include s.media(m){
+						font-size:1.4em;
+					}
+					@include s.media(xl){
+						font-size:1.7em;
+					}
+				}
+				dd{
+					font-family: 'Noto Sans JP', sans-serif;
+					font-weight: 700;
+					font-size:1.3em;
+					letter-spacing:0.1em;
+					text-shadow: 
+					white 2px 0px,  white -2px 0px,
+				    white 0px -2px, white 0px 2px,
+				    white 2px 2px , white -2px 2px,
+				    white 2px -2px, white -2px -2px,
+				    white 1px 2px,  white -1px 2px,
+				    white 1px -2px, white -1px -2px,
+				    white 2px 1px,  white -2px 1px,
+				    white 2px -1px, white -2px -1px;
+		    		margin-top:0.6em;
+					@include s.media(m){
+						font-size:3em;
+		    			margin-top:0;
+					}
+					@include s.media(xl){
+						font-size:3.7em;
+					}
+				    small{
+				    	font-size:0.7em;
+				    }
+				}
+			}
+		}
+		&.--type02{
+			a{
+				&::after {
+					border-color:s.$colorType04;
+				}
+				dl dt{
+					background:s.$colorType04;
+				}
+				&:hover{
+					&::after {
+						border-color:#000;
+					}
+					dl dt{
+						background:#000;
+					}
+				}
+			}
+		}
+	}
+}
+
+#wrapper .homeNewsBox{
+	display:none;
+	width:100%;
+	background:#f5f4ea;
+	color:s.$colorType02;
+	margin-bottom:3em;
+	@include s.media(m){
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		border-radius:2.5em;
+	}
+	&.--typeSp{
+		display:block;
+		@include s.media(m){
+			display:none;
+		}
+	}
+	&__title{
+		width:90%;
+		display:block;
+		font-family: 'Noto Sans JP', sans-serif;
+		font-weight: 700;
+		font-size:1.24em;
+		padding:s.$spaceSize s.$spaceSize s.$spaceSize*.5;
+		text-align:center;
+		border-bottom:#bba582 solid 1px;
+		margin-left:auto;
+		margin-right:auto;
+		@include s.media(m){
+			width:15%;
+			padding:s.$spaceSize s.$spaceSize s.$spaceSize s.$spaceSize*2;
+			text-align:left;
+			border-bottom:none;
+		}
+		@include s.media(xl){
+			padding:s.$spaceSize s.$spaceSize s.$spaceSize s.$spaceSize*3;
+			letter-spacing:0.1em;
+		}
+	}
+	&__content{
+		display:block;
+		padding:s.$spaceSize s.$spaceSize;
+		position:relative;
+		@include s.media(m){
+			width:60%;
+		}
+		@include s.media(xl){
+			width:65%;
+		}
+		&::before{
+			content:"";
+			display:none;
+			width:1px;
+			height:1.5em;
+			background:#bba582;
+			position:absolute;
+			top:50%;
+			left:-0.2em;
+			margin-top:-0.7em;
+			@include s.media(m){
+				display:block;
+			}
+			@include s.media(xl){
+				position:absolute;
+				top:50%;
+				left:-1em;
+			}
+		}
+		span{
+			display:block;
+			@include s.media(m){
+				display:inline;
+			}
+		}
+		span+span{
+			font-weight:bold;
+			@include s.media(m){
+				padding-left:1em;
+				font-weight:normal;
+			}
+			@include s.media(xl){
+				padding-left:2em;
+			}
+		}
+	}
+	&__button{
+		display:block;
+		text-align:center;
+		padding:0 s.$spaceSize s.$spaceSize;
+		@include s.media(m){
+			padding:s.$spaceSize s.$spaceSize;
+			width:25%;
+			text-align:left;
+		}
+		@include s.media(xl){
+			width:20%;
+		}
+		a{
+			min-width:70%;
+			color: #FFF;
+			background: s.$colorType02;
+			display: inline-block;
+			position: relative;
+			padding: 0.8em 2.8em 0.8em 1.5em;
+			border-radius: 3px;
+			@include s.media(m){
+				min-width:auto;
+				padding: 0.6em 2.8em 0.6em 1.5em;
+			}
+			&::after{
+			    content: "\f105";
+				font-family: 'icomoon';
+			    position: absolute;
+			    top: 50%;
+			    right: 1em;
+			    margin-top:-0.5em;
+			    transition: all 0.5s;
+			}
+			&:hover{
+				background:#369826;
+			}
+			&:active{
+				border-bottom: none;
+				transform: translateY(4px);
+			}
+		}
+	}
+}
+
+
+#wrapper .homeWorkHeadLineBox{
+	display:block;
+	background:#fcf3bf url(../img/home/bgPetTransferSp.jpg) no-repeat center top;
+	background-size:100% auto;
+	padding:2em 0;
+	@include s.media(m){
+		background:#fcf3bf url(../img/home/bgPetTransfer.jpg) no-repeat center top;
+		background-size:auto;
+		padding:4em 0;
+	}
+	&__chach{
+		display:block;
+		text-align:center;
+		font-family: 'Noto Sans JP', sans-serif;
+		font-weight: 700;
+		font-size:1.24em;
+		letter-spacing:0.1em;
+		color:s.$colorType03;
+		@include s.media(m){
+			margin-bottom:1em;
+		}
+	}
+	&__title{
+		display:block;
+		text-align:center;
+		font-family: 'Noto Sans JP', sans-serif;
+		font-weight: 700;
+		font-size:1.8em;
+		letter-spacing:0.1em;
+		color:#000;
+		margin-bottom:1em;
+		@include s.media(m){
+			margin-bottom:1.7em;
+			font-size:2em;
+		}
+	}
+	&__sentence{
+		display:block;
+		text-align:center;
+		@include s.media(m){
+			font-weight:bold;
+			font-szie:1.1em;
+			letter-spacing:0.1em;
+		}
+	}
+	&.--typeTransportation{
+		background:#c7d9e4 url(../img/home/bgTransportationSp.jpg) no-repeat center top;
+		@include s.media(m){
+			background:#c7d9e4 url(../img/home/bgTransportation.jpg) no-repeat center top;
+		}
+		.homeWorkHeadLineBox__chach{
+			color:s.$colorType04;
+		}
+
+	}
+}
+
+#wrapper .homeUserBox{
+	display:block;
+	background:#fffce0;
+	padding-top:3em;
+	padding-bottom:3em;
+	position:relative;
+	z-index:2;
+	@include s.media(m){
+		background:#fffef0;
+	}
+	&::before{
+		display:none;
+		content: " ";
+		width:100%;
+		height:9em;
+		background:#fffce0;
+		position:absolute;
+		bottom:-1em;
+		left:0;
+		@include s.media(m){
+			display:block;
+		}
+	}
+	&::after{
+		display:none;
+		content: " ";
+		width:100%;
+		height:18em;
+		border-radius:50%;
+		background:#fffef0;
+		position:absolute;
+		bottom:-1em;
+		left:0;
+		@include s.media(m){
+			display:block;
+		}
+	}
+	&__title{
+		font-size:1.4em;
+		display:block;
+		text-align:center;
+		font-family: 'Noto Sans JP', sans-serif;
+		font-weight: 700;
+		letter-spacing:0.1em;
+		color:#FFF;
+		background:s.$colorType03;
+		margin-bottom:1em;
+		border-radius:2.5em;
+		padding:0.5em 1em;
+		@include s.media(m){
+			font-size:1.7em;
+			width:90%;
+			margin-left:auto;
+			margin-right:auto;
+			margin-bottom:2em;
+		}
+		span.hidden-sp{
+			@include s.media(m){
+				display:inline !important;
+			}
+		}
+	}
+	&__inner{
+		margin-top:6em;
+		position:relative;
+		z-index:3;
+		@include s.media(m){
+			margin-top:13em;
+		}
+		@include s.media(xl){
+			margin-top:15em;
+		}
+		@include s.media(m){
+			width:70%;
+			margin-left:auto;
+			margin-right:auto;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+		}
+		&::before{
+			content:" ";
+			width:4em;
+			height:12em;
+			background:url(../img/common/imgFootprints.png) no-repeat center bottom;
+			background-size:100% auto;
+			position:absolute;
+			top:1em;
+			left:-1em;
+			transform: scale(-1, 1);
+			@include s.media(m){
+				width:7em;
+				height:14em;
+				position:absolute;
+				top:6em;
+				left:-14em;
+			}
+		}
+		&::after{
+			content:" ";
+			width:4em;
+			height:12em;
+			background:url(../img/common/imgFootprints.png) no-repeat center bottom;
+			background-size:100% auto;
+			position:absolute;
+			top:-4em;
+			right:0;
+			@include s.media(m){
+				width:7em;
+				height:14em;
+				position:absolute;
+				top:-8em;
+				right:-16em;
+			}
+			@include s.media(xl){
+				width:7em;
+				height:14em;
+				position:absolute;
+				top:-8em;
+				right:-19em;
+			}
+		}
+	}
+	&__caseBox{
+		display:block;
+		@include s.media(m){
+			width:33.3%;
+			padding:0 1em;
+		}
+		&.--isCase01{
+			width:70%;
+			margin-left:auto;
+			margin-right:auto;
+			position:relative;
+			padding:0;
+			@include s.media(m){
+				width:33.3%;
+				padding:0 1em;
+			}
+			&::before{
+			    content:" ";
+				width:6em;
+				height:4em;
+				background:url(../img/home/imgCard.png) no-repeat center bottom;
+				background-size:100% auto;
+				position:absolute;
+				top:13.5em;
+				left:-5em;
+				z-index:2;
+				@include s.media(m){
+					width:7em;
+					height:5em;
+					position:absolute;
+					top:-12em;
+					left:-9em;
+				}
+				@include s.media(xl){
+					width:9em;
+					height:6em;
+					position:absolute;
+					top:-13em;
+					left:-8em;
+				}
+			}
+			&::after{
+			    content:" ";
+				width:7em;
+				height:4em;
+				background:url(../img/home/imgCar.png) no-repeat center bottom;
+				background-size:100% auto;
+				position:absolute;
+				top:19em;
+				right:5em;
+				z-index:2;
+				@include s.media(m){
+					width:7em;
+					height:4em;
+					position:absolute;
+					right:1em;
+					top:-5.5em;
+				}
+				@include s.media(xl){
+					width:9em;
+					height:6em;
+					position:absolute;
+					right:1em;
+					top:-6em;
+				}
+			}
+			.homeUserBox__case{
+				position:absolute;
+				left:-4em;
+				bottom:-4em;
+				@include s.media(m){
+					position:absolute;
+					top:-9em;
+					left:-6em;
+					bottom:auto;
+				}
+				p{
+					padding:1.5em 1em;
+					&::after{
+					    transform: scale(-1, -1);
+						position:absolute;
+						right:auto;
+						left:4em;
+						bottom:auto;
+						top:-0.9em;
+						@include s.media(m){
+					    	transform: scale(-1, 1);
+							position:absolute;
+							right:3em;
+							bottom:-1em;
+							top:auto;
+						}
+					}
+				}
+			}
+		}
+		&.--isCase02{
+			@include s.media(m){
+				position:relative;
+			}
+			&::before{
+			    content:" ";
+				width:6em;
+				height:4em;
+				background:url(../img/home/imgCage.png) no-repeat center bottom;
+				background-size:100% auto;
+				position:absolute;
+				right:2.5em;
+				top:-5em;
+				z-index:2;
+				@include s.media(m){
+					width:7em;
+					height:5em;
+					position:absolute;
+					top:-11em;
+					right:-5em;
+				}
+				@include s.media(xl){
+					width:9em;
+					height:6em;
+					position:absolute;
+					right:-6em;
+					top:-13em;
+				}
+			}
+			&::after{
+				content:" ";
+				width:3.5em;
+				height:11em;
+				background:url(../img/common/imgFootprints.png) no-repeat center bottom;
+				background-size:100% auto;
+				position:absolute;
+				top:-10em;
+				left:1em;
+				transform: scale(-1, 1);
+				display:block;
+				@include s.media(m){
+					display:none;
+				}
+			}
+			.homeUserBox__case{
+				position:absolute;
+				top:-4em;
+				left:6em;
+				@include s.media(m){
+					position:absolute;
+					top:-10em;
+					left:-1em;
+				}
+			}
+			.homeUserBox__image{
+				display:none;
+				@include s.media(m){
+					display:block;
+				}
+			}
+		}
+		&.--isCase03{
+			@include s.media(m){
+				position:relative;
+			}
+			&::before{
+			    content:" ";
+				width:6em;
+				height:4em;
+				background:url(../img/home/imgHospital.png) no-repeat center bottom;
+				background-size:100% auto;
+				position:absolute;
+				top:11em;
+				right:-2em;
+				z-index:2;
+				@include s.media(m){
+					width:7em;
+					height:5em;
+					position:absolute;
+					right:-9em;
+					top:-11em;
+				}
+				@include s.media(xl){
+					width:9em;
+					height:6em;
+					position:absolute;
+					right:-10em;
+					top:-11em;
+				}
+			}
+			.homeUserBox__case{
+				position:absolute;
+				left:auto;
+				right:-1em;
+				bottom:-1em;
+				@include s.media(m){
+					position:absolute;
+					top:-8.5em;
+					bottom:auto;
+					left:auto;
+					right:-7.5em;
+				}
+				p{
+					&::after{
+					    transform: scale(1, -1);
+						position:absolute;
+						right:auto;
+						left:4em;
+						bottom:auto;
+						top:-0.9em;
+						@include s.media(m){
+					    	transform: scale(1, 1);
+							position:absolute;
+							right:3em;
+							bottom:-1em;
+							top:auto;
+						}
+					}
+				}
+			}
+			.homeUserBox__image{
+				display:none;
+				@include s.media(m){
+					display:block;
+				}
+			}
+		}
+	}
+	&__case{
+		p{
+			background:#ffe179;
+			padding:1em 1em;
+			border-radius:2.5em;
+			font-family: 'Noto Sans JP', sans-serif;
+			font-weight: 700;
+			font-size:1.1em;
+			position:relative;
+			min-width:12em;
+			text-align:center;
+			line-height:1.4;
+			@include s.media(m){
+				font-size:1.4em;
+				min-width:12em;
+			}
+			@include s.media(xl){
+				font-size:1.6em;
+			}
+			&::after{
+			    content: " ";
+				width:2em;
+				height:1em;
+				background:url(../img/common/imgFukidashi.png) no-repeat center top;
+				background-size:100% auto;
+				position:absolute;
+				right:3em;
+				bottom:-1em;
+			}
+		}
+	}
+	&__image{
+		img{
+			width:100%;
+		}
+	}
+}
+
+#wrapper .homePointBox{
+	background:#fffce0;
+	padding-top:6em;
+	display:block;
+	position:relative;
+	&__title{
+		display:block;
+		text-align:center;
+		h3{
+			display:inline-block;
+			border-bottom:#ffd200 solid 3px;
+			padding:0 3.5em 1em;
+			font-family: 'Noto Sans JP', sans-serif;
+			font-weight: 700;
+			font-size:1.3em;
+			letter-spacing:0.1em;
+			position:relative;
+			@include s.media(m){
+				font-size:2.4em;
+				padding:0 0 0.3em;
+			}
+			&::before{
+			    content:" ";
+				width:4.5em;
+				height:6em;
+				background:url(../img/home/imgPet01.png) no-repeat center bottom;
+				background-size:100% auto;
+				position:absolute;
+				left:-1em;
+				bottom:0.5em;
+				@include s.media(m){
+					width:3.5em;
+					height:5em;
+					position:absolute;
+					left:-4em;
+					bottom:0;
+				}
+			}
+			&::after{
+			    content:" ";
+				width:5em;
+				height:6em;
+				background:url(../img/home/imgPet02.png) no-repeat center bottom;
+				background-size:100% auto;
+				position:absolute;
+				right:-1.5em;
+				bottom:0.5em;
+				@include s.media(m){
+					width:4em;
+					height:5em;
+					position:absolute;
+					right:-4em;
+				bottom:0;
+				}
+			}
+			b{
+				color:s.$colorType03;
+			}
+		}
+	}
+	&__inner{
+		width:70%;
+		margin-left:auto;
+		margin-right:auto;
+		display:block;
+		position:relative;
+		@include s.media(m){
+			width:84%;
+		}
+	}
+	&__image{
+		display:block;
+		position:relative;
+		figure{
+			width:100%;
+			border-radius:50%;
+			overflow:hidden;
+			img{
+				width:100%;
+			}
+		}
+	}
+	&__number{
+		font-family: 'Noto Sans JP', sans-serif;
+		font-weight: 700;
+		font-size:1.3em;
+		background:#fffce0;
+		display:block;
+		width:4em;
+		height:4em;
+		border-radius:50%;
+		text-align:center;
+		color:s.$colorType03;
+		line-height:1.2;
+		position:absolute;
+		top:1em;
+		left:-1em;
+		padding:0.3em 0 0 0;
+		small{
+			display:block;
+		}
+		span{
+			font-size:1.8em;
+		}
+	}
+	&__pointTitle{
+		font-family: 'Noto Sans JP', sans-serif;
+		font-weight: 700;
+		font-size:1.3em;
+		text-align:center;
+
+	}
+	&__content{
+		text-align:center;
+		@include s.media(m){
+			text-align:left;
+		}
+	}
+}
+
+#wrapper .homePetServiceBox{
+	background:#fffce0;
+	display:block;
+	padding-bottom:3em;
+	.inBase{
+		position:relative;
+		&::before{
+			@include s.media(m){
+				content:" ";
+				background:url(../img/common/imgFootprints.png) no-repeat center bottom;
+				background-size:100% auto;
+				transform: scale(-1, 1);
+				width:7em;
+				height:14em;
+				position:absolute;
+				bottom:13em;
+				left:-14em;
+			}
+		}
+		&::after{
+			@include s.media(m){
+				content:" ";
+				background:url(../img/common/imgFootprints.png) no-repeat center bottom;
+				background-size:100% auto;
+				width:7em;
+				height:14em;
+				position:absolute;
+				top:-12em;
+				right:-16em;
+			}
+		}
+	}
+}
+.homeServicePC{
+	display:none;
+	@include s.media(m){
+		display:block;
+	}
+}
+#wrapper .homeServiceBox{
+	display:block;
+	background:#ecf8ff;
+	padding-top:3em;
+	padding-bottom:3em;
+	&__inner{
+		display:block;
+		background:#FFF;
+		padding-bottom:2em;
+		dt h4{
+			font-family: 'Noto Sans JP', sans-serif;
+			font-weight: 700;
+			font-size:1.3em;
+			color:s.$colorType04;
+			text-align:center;
+			padding:0 0.5em;
+			@include s.media(m){
+				font-size:1.5em;
+			}
+		}
+		dd{
+			padding:0 1em;
+		}
+		.button--type01 a{
+			min-width:60%;
+			padding: 0.8em 2.8em 0.8em 1.5em;
+		}
+	}
+	&__image{
+		img{
+			width:100%;
+		}
+	}
+	.col-sm-6.hidden-sp{
+		@include s.media(m){
+			display:block !important;
+		}
+	}
+}
+
+#wrapper .homeCompanyBox{
+	display:block;
+	@include s.media(m){
+		width:50%;
+		float:right;
+		padding-left:1em;
+	}
+	&__title{
+		font-family: 'Noto Sans JP', sans-serif;
+		font-weight: 700;
+		letter-spacing:0.1em;
+		display:block;
+		text-align:center;
+		border-bottom:#dcdcdc solid 2px;
+		padding:1.5em 0 0.5em;
+		position:relative;
+		small{
+			width:100%;
+			display:block;
+			position:absolute;
+			top:0;
+			left:0;
+			color:s.$colorType02;
+			font-size:1em;
+		}
+		p{
+			font-size:2.5em;
+			letter-spacing:0.2em;
+		}
+	}
+	&__inner{
+		display:block;
+		@include s.media(m){
+			width:80%;
+			display:block;
+			margin-left:auto;
+			margin-right:auto;
+		}
+	}
+	&__image{
+		img{
+			width:100%;
+		}
+	}
+}
+#wrapper .homeBlogBox{
+	display:block;
+	@include s.media(m){
+		width:50%;
+		float:left;
+		padding-right:1em;
+	}
+	&__title{
+		font-family: 'Noto Sans JP', sans-serif;
+		font-weight: 700;
+		letter-spacing:0.1em;
+		display:block;
+		text-align:center;
+		border-bottom:#dcdcdc solid 2px;
+		padding:1.5em 0 0.5em;
+		position:relative;
+		small{
+			width:100%;
+			display:block;
+			position:absolute;
+			top:0;
+			left:0;
+			color:s.$colorType02;
+			font-size:1em;
+		}
+		p{
+			font-size:2.5em;
+			letter-spacing:0.2em;
+		}
+	}
+	&__inner{
+		display:block;
+		a{
+			width:100%;
+			display:flex;
+			background:#FFF;
+			&:hover{
+				background:#f5f4ea;
+				color:#000;
+				.homeBlogBox__date span{
+					background:#000;;
+				}
+				img{
+					opacity:0.7;
+				}
+			}
+		}
+		&.--typePet{
+			.homeBlogBox__date span{
+				background:s.$colorType03;
+			}
+		}
+		&.--typeTransportation{
+			.homeBlogBox__date span{
+				background:s.$colorType04;
+			}
+		}
+	}
+	&__image{
+		width:37%;
+		display:block;
+		@include s.media(m){
+			width:43%;
+		}
+		img{
+			width:100%;
+			opacity:1;
+			transition: all 0.5s;
+		}
+	}
+	&__date span{
+		margin-left:1em;
+		display:inline-block;
+		padding:0.1em 1em;
+		color:#FFF;
+		transition: all 0.5s;
+	}
+	&__content{
+		width:63%;
+		display:block;
+		padding:0.5em 0 0.5em 1em;
+		@include s.media(m){
+			width:57%;
+		}
+		@include s.media(m){
+			padding:1em 1em 1em 2em;
+		}
+	}
+	&__contentTitle{
+		font-weight:bold;
+	}
+	.button--type01{
+		a{
+			min-width:60%;
+			padding: 0.8em 2.8em 0.8em 1.5em;
+			@include s.media(m){
+				min-width:15em;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

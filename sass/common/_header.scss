@@ -1,0 +1,152 @@
+@use "../_setting" as s;
+
+#header {
+	position: relative;
+    transition: .3s;
+}
+
+#wrapper .header {
+    &__siteTitleBox {
+		display:block;
+		@include s.media(m){
+			padding:2em 0 0;
+			border-bottom:#ffad42 solid 3px;
+		}
+		dd{
+			display:none;
+			@include s.media(m){
+				width:60%;
+				float:left;
+				display:block;
+				padding:0 0 0 2em;
+				text-align:right;
+			}
+		}
+	}
+    &__siteTitle{
+		width:43%;
+		float:left;
+		padding:1em 0 1em 0;
+		display:block;
+		@include s.media(m){
+			padding:1.5em 1em 1.5em 2em;
+			width:26%;
+			padding:0;
+			vertical-align:middle;
+			margin-top:2.2em;
+		}
+		@include s.media(xl){
+			margin-top:1.2em;
+		}
+		a{
+			@include s.media(m){
+				position:relative;
+			}
+			img{
+				width:100%;
+			}
+		}
+    }
+    &__headContent{
+		display:none;
+		@include s.media(m){
+			width:74%;
+			float:left;
+			display:block;
+			padding:0 0 0 2em;
+			text-align:right;
+		}
+    }
+    &__cotactBox{
+    	display:flex;
+    	widtdh:100%;
+    	justify-content:flex-end;
+    }
+    &__cotactTel {
+		font-family: 'Noto Sans JP', sans-serif;
+		font-weight: 700;
+		font-size:1.7em;
+		padding-left:2.3em;
+		position: relative;
+		@include s.media(xl){
+			font-size:2em;
+		}
+		&::before{
+			content: "=";
+			font-family: 'CONDENSEicon';
+			position: absolute;
+			top: 50%;
+			left: 1em;
+			margin-top:-1.1em;
+			transition: all 0.5s;
+			color:s.$colorType02;
+			@include s.media(xl){
+				margin-top:-0.9em;
+			}
+		}
+	}
+    &__cotactFax {
+		font-family: 'Noto Sans JP', sans-serif;
+		font-weight: 700;
+		font-size:1.7em;
+		margin-right:0.5em;
+		padding-left:2.3em;
+		position: relative;
+		@include s.media(xl){
+			font-size:2em;
+		}
+		&::before{
+			content: "W";
+			font-family: 'CONDENSEicon';
+			position: absolute;
+			top: 50%;
+			left: 1em;
+			margin-top:-1.1em;
+			transition: all 0.5s;
+			color:s.$colorType02;
+			@include s.media(xl){
+				margin-top:-0.9em;
+			}
+		}
+	}
+    &__cotactMail {
+    	min-height:4em;
+    	a{
+			font-family: 'Noto Sans JP', sans-serif;
+			font-weight: 500;
+			letter-spacing:0.1em;
+			font-size:1em;
+			color: #FFF;
+			background: s.$colorType02;
+			border-radius:0.3em;
+			border-bottom: #56b147 solid 4px ;
+			display: inline-block;
+			position: relative;
+			padding: 0.6em 1.5em 0.6em 2.8em;
+			@include s.media(xl){
+				font-size:1.2em;
+			}
+			&::before{
+			    content: "F";
+				font-family: 'CONDENSEicon';
+			    position: absolute;
+			    top: 50%;
+			    left: 1em;
+			    margin-top:-0.75em;
+			    transition: all 0.5s;
+				font-size:1.2em;
+			}
+			&:hover{
+				color:#FFF;
+				border-bottom: none;
+				transform: translateY(4px);
+			}
+    	}
+	}
+}
+
+#home .header__siteTitleBox dt a:after{
+	@include s.media(m){
+		content: none;
+	}
+}
